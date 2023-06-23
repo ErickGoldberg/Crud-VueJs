@@ -9,7 +9,7 @@
 <body>
     
     <div id="app">
-        
+
             <label for="cad_cliente">Cadastrar cliente:</label> <br>
             <input type="text" name="" id="cad_cliente">
         
@@ -18,7 +18,11 @@
             <main>
                 <h2>Clientes cadastrados</h2>
                 <ul>
-                    <li v-for="(cliente, index) in clientes"> {{ cliente }}</li>
+                    <li v-for="(cliente, index) in clientes"> {{ cliente }}
+
+                        <button @click="editarCliente(index)">Editar</button>
+                        <button @click="apagarCliente(id)">Apagar</button>
+                    </li>
                 </ul>
             </main>
     </div>
