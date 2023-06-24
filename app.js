@@ -10,11 +10,12 @@ const app = Vue.createApp({
             this.clientes.push(addCliente)
         },
         apagarCliente(index){
-            let clienteIndex = this.clientes.indexOf(index);
-            this.clientes.splice(clienteIndex, 1);
+            
+            this.clientes.splice(this.clientes[index - 1], 1);
         },
         editarCliente(index){
-
+            let clienteEditado = prompt("Digite o novo nome:");
+            this.clientes[index] = clienteEditado;
         }
     }
 });

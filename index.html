@@ -21,7 +21,7 @@
                     <li v-for="(cliente, index) in clientes"> {{ cliente }}
 
                         <button @click="editarCliente(index)">Editar</button>
-                        <button @click="apagarCliente(id)">Apagar</button>
+                        <button @click="apagarCliente(index)">Apagar</button>
                     </li>
                 </ul>
             </main>
